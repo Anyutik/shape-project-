@@ -1,9 +1,6 @@
-# Basic Project
+# Shape Project
 
- Basic Java Maven Project Structure
+ Shape Project, Intro to Classes
 
- * QA
- * Java
- * Maven
-
+ 
  [Anna Antonyan](http://sqasolution.com)
