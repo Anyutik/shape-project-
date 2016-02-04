@@ -247,28 +247,28 @@ public class RequestInput {
 	 *
 	 * @return Boolean value based on user input
 	 */
-	public static String getString(String question, String... words) {
-		// Declare local variables
+	public static String getStringIgnoreCase(String question, String... words) {
 		while (true) {
+			// Declare Local Variables
 			boolean present = false;
+			// Get the character using alternative method to get a char
 			String input = RequestInput.getString(question);
+			// Iterate through the supplied chars and see if it is present
 			for (int i = 0; i < words.length; i++) {
-				if ((words[i].equals(input))) {
+				if ((words[i].equalsIgnoreCase(input))) {
 					present = true;
 				}
-
 			}
-			// if present variable is set to true and it is a valid option
+			// If present variable is set to true and it is a valid option
 			if (present == true) {
 				// return the character
 				return input;
 			} else {
-				// give an error message
-				System.out.println("You have not entered a valid character");
-				// continue with next iteration
+				// Give an error message
+				System.out.println("You have not entered a valid word (" + input + ").");
+				// Continue with next iteration
 				continue;
 			}
 		}
-
 	}
 }
